@@ -25,7 +25,7 @@
                 <TableColumn fx:id="repairCol2" prefWidth="220.0" text="RepairID" />
               </columns>
             </TableView>
-            <TableView prefHeight="100.0" prefWidth="300.0">
+            <TableView fx:id="carTable" prefHeight="100.0" prefWidth="300.0">
               <columns>
                 <TableColumn fx:id="carCol1" prefWidth="75.0" text="PK" />
                 <TableColumn fx:id="carCol2" prefWidth="220.0" text="CarID" />
@@ -43,13 +43,13 @@
                   <TextField fx:id="ownerID" />
                </children>
             </HBox>
-            <HBox prefHeight="32.0" prefWidth="302.0">
+            <HBox prefHeight="41.0" prefWidth="302.0">
                <children>
                   <Label text="Name: " />
                   <TextField fx:id="name" />
                </children>
             </HBox>
-            <HBox prefHeight="0.0" prefWidth="200.0">
+            <HBox prefHeight="35.0" prefWidth="302.0">
                <children>
                   <Label text="Address: " />
                   <TextField fx:id="address" />
@@ -70,11 +70,62 @@
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Button fx:id="ownerInsertButton" mnemonicParsing="false" onAction="#addOwnerData" text="Insert" />
-                  <Button fx:id="ownerUpdateButton" mnemonicParsing="false" text="Update" />
-                  <Button fx:id="ownerDeleteButton" mnemonicParsing="false" text="Delete" />
+                  <Button fx:id="ownerUpdateButton" mnemonicParsing="false" onAction="#ownerUpdate" text="Update" />
+                  <Button fx:id="ownerDeleteButton" mnemonicParsing="false" onAction="#ownerDelete" text="Delete" />
                </children>
             </HBox>
+            <Button fx:id="ownerDisplayButton" mnemonicParsing="false" onAction="#ownerDisplay" text="Display" />
          </children>
       </VBox>
    </left>
+   <right>
+      <VBox prefHeight="412.0" prefWidth="298.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="48.0" prefWidth="298.0">
+               <children>
+                  <Label text="carID: " />
+                  <TextField fx:id="carID" />
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="298.0">
+               <children>
+                  <Label text="Make: " />
+                  <TextField fx:id="make" />
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="298.0">
+               <children>
+                  <Label text="Model: " />
+                  <TextField fx:id="model" />
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="298.0">
+               <children>
+                  <Label text="VIN: " />
+                  <TextField fx:id="VIN" />
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="298.0">
+               <children>
+                  <Label text="buildYear: " />
+                  <TextField fx:id="buildYear" />
+               </children>
+            </HBox>
+            <HBox prefHeight="76.0" prefWidth="298.0">
+               <children>
+                  <Label text="Type: " />
+                  <TextField fx:id="type" />
+               </children>
+            </HBox>
+            <HBox prefHeight="117.0" prefWidth="298.0">
+               <children>
+                  <Button fx:id="carInsertButton" mnemonicParsing="false" onAction="#addCarData" text="Insert" />
+                  <Button fx:id="carUpdateButton" mnemonicParsing="false" onAction="#carUpdate" text="Update" />
+                  <Button fx:id="carDeleteButton" mnemonicParsing="false" onAction="#carDelete" text="Delete" />
+               </children>
+            </HBox>
+            <Button fx:id="carDisplayButton" mnemonicParsing="false" onAction="#carDisplay" text="Display" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>
